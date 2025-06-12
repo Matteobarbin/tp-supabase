@@ -1,75 +1,90 @@
-# React Authentication App with Supabase
+# 🎮 Juego Suma Rápida
 
-A simple React application with authentication screens including Login, Signup, and a Home page, connected to Supabase for backend authentication.
+Un juego interactivo de matemáticas desarrollado con React, TypeScript y Supabase.
 
-## Features
+## 🚀 Características
 
-- Login page with Supabase authentication
-- Signup page with Supabase user registration
-- Home page with logout functionality
-- Routing between pages
+- **Autenticación de Usuarios**: Sistema completo de registro e inicio de sesión
+- **Juego de Sumas**: Desafío matemático con tiempo límite
+- **Sistema de Puntuaciones**: Registro de puntuaciones altas y historial personal
+- **Diseño Moderno**: Interfaz atractiva con gradientes y efectos visuales
+- **Base de Datos**: Almacenamiento seguro de datos con Supabase
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 14 or higher)
-- npm or yarn
-- Supabase account and project
-
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Configure your Supabase credentials:
-   - Create a file named `.env.local` in the project root
-   - Add the following environment variables:
-   ```
-   VITE_SUPABASE_URL=https://your_project_id.supabase.co
-   VITE_SUPABASE_ANON_KEY=your_VITE_SUPABASE_ANON_KEY
-   ```
-   - Replace `your_VITE_SUPABASE_ANON_KEY` with your actual Supabase anon/public key
-
-4. Start the development server:
-
-```bash
-npm run dev
-```
-
-5. Open your browser and navigate to `http://localhost:5173`
-
-## Technologies Used
+## 🛠️ Tecnologías Utilizadas
 
 - React
 - TypeScript
-- React Router
-- Vite
-- Supabase (Authentication & Backend)
+- Tailwind CSS
+- Supabase
+  - Autenticación
+  - Base de datos PostgreSQL
+  - Edge Functions
 
-## Project Structure
+## 🎯 Funcionalidades Principales
 
-```
-src/
-  ├── lib/
-  │   └── supabaseClient.ts
-  ├── pages/
-  │   ├── Home.tsx
-  │   ├── Login.tsx
-  │   └── Signup.tsx
-  ├── App.tsx
-  ├── App.css
-  ├── config.ts
-  ├── main.tsx
-  └── index.css
-```
+1. **Sistema de Autenticación**
 
-## Notes
+   - Registro de nuevos usuarios
+   - Inicio de sesión
+   - Protección de rutas
 
-- You must set up your own Supabase project and configure the environment variables for authentication to work
-- For production, ensure you properly secure your environment variables
-- Consider implementing additional features like password reset, email verification, and profile management
+2. **Juego Suma Rápida**
+
+   - Generación aleatoria de números
+   - Temporizador de 60 segundos
+   - Sistema de puntuación
+   - Validación de respuestas
+
+3. **Sistema de Puntuaciones**
+   - Tabla de puntuaciones globales
+   - Historial personal de juegos
+   - Estadísticas de tiempo y movimientos
+
+## 🎨 Diseño
+
+- Interfaz moderna con gradientes
+- Efectos de cristal (glassmorphism)
+- Animaciones suaves
+- Diseño responsivo
+- Paleta de colores vibrante
+
+## 📦 Instalación
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/Matteobarbin/tp-supabase.git
+   ```
+
+2. Instalar dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Configurar variables de entorno:
+
+   - Crear archivo `.env.local`
+   - Agregar las variables de Supabase
+
+4. Iniciar el proyecto:
+   ```bash
+   npm run dev
+   ```
+
+## 🔧 Configuración de Supabase
+
+1. Crear proyecto en Supabase
+2. Configurar autenticación
+3. Crear tablas en la base de datos
+4. Configurar Edge Functions
+5. Agregar variables de entorno
+
+## 👨‍💻 Autor
+
+- **Matteo Barbin**
+  - GitHub: [@Matteobarbin](https://github.com/Matteobarbin)
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT.
