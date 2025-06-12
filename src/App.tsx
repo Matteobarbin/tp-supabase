@@ -1,30 +1,33 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider } from './contexts/AuthContext';
+import { SignIn } from './components/SignIn';
+import { SignUp } from './components/SignUp';
+import { QuickSumGame } from './components/QuickSumGame';
+import { useAuth } from './contexts/AuthContext';
 import './App.css';
+
+function PrivateRoute({ children }: { children: React.ReactNode }) {
+  const { user } = useAuth();
+  return user ? <>{children}</> : <Navigate to="/signin" />;
+}
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <div className="content-wrapper">
-          <Routes>
-            {/* Public routes */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            
-            {/* Protected routes */}
-            <Route element={<ProtectedRoute />}>
-              <Route path="/" element={<Home />} />
-            </Route>
-            
-            {/* Redirect any unmatched route to login */}
-            <Route path="*" element={<Navigate to="/login" />} />
-          </Routes>
-        </div>
-      </div>
+      <AuthProvider>
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <QuickSumGame />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
     </Router>
   );
 }
