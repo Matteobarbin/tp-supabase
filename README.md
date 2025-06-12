@@ -88,3 +88,13 @@ Un juego interactivo de matemáticas desarrollado con React, TypeScript y Supaba
 ## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT.
+
+## 🖼️ Capturas de pantalla
+
+### Pantalla de inicio del juego
+
+![Pantalla de inicio del juego Suma Rápida](assets/captura-inicio.png)
+
+### Pantalla durante una partida
+
+![Pantalla durante una partida del juego Suma Rápida](assets/captura-juego.png)
